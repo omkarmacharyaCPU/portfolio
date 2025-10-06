@@ -1,0 +1,231 @@
+/* =========================
+   Reset & Base
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #e0c3fc, #8ec5fc); /* purple-pink gradient */
+    color: #222;
+    line-height: 1.5;
+    transition: background 0.5s, color 0.5s;
+    overflow-x: hidden;
+}
+
+a { text-decoration: none; color: #9b5de5; transition: color 0.3s; }
+a:hover { color: #f15bb5; }
+
+.container { width: min(1100px, 90%); margin: 0 auto; padding: 20px; }
+
+/* =========================
+   Header
+========================= */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #9b5de5, #f15bb5); /* purple → pink */
+    color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    position: relative;
+    overflow: hidden;
+}
+
+header h1#logo {
+    font-size: 2.4rem;
+    cursor: pointer;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+header h1#logo:hover {
+    transform: rotate(-5deg) scale(1.1);
+}
+
+header .tagline {
+    margin-top: 8px;
+    font-size: 1rem;
+    opacity: 0.85;
+}
+
+/* Theme toggle button */
+#theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #fff;
+    color: #9b5de5;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, background 0.3s, color 0.3s;
+}
+#theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* =========================
+   Sections
+========================= */
+section {
+    margin-bottom: 50px;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    display: inline-block;
+    border-bottom: 3px solid #f15bb5;
+    padding-bottom: 5px;
+}
+
+/* =========================
+   Project Cards
+========================= */
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-card {
+    background: linear-gradient(270deg, #9b5de5, #f15bb5, #fcee09, #9b5de5);
+    background-size: 800% 800%;
+    animation: gradientBG 15s ease infinite;
+    color: white;
+    border-radius: 12px;
+    padding: 20px;
+    flex: 1 1 250px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-15px) rotateZ(1deg) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+
+.project-card h3 { margin-bottom: 10px; }
+.project-card p { font-size: 0.95rem; color: #555; }
+
+/* =========================
+   Mini Games Cards
+========================= */
+.game-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.game-card {
+    background: linear-gradient(270deg, #9b5de5, #f15bb5, #fcee09, #9b5de5);
+    background-size: 800% 800%;
+    animation: gradientBG 15s ease infinite;
+    color: white;
+    border-radius: 12px;
+    padding: 20px;
+    flex: 1 1 300px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-15px) rotateZ(-1deg) scale(1.04);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.game-card button {
+    margin-top: 10px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 10px;
+    background: #9b5de5;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+.game-card button:hover {
+    transform: scale(1.1);
+    background: #f15bb5;
+}
+
+/* =========================
+   Skills
+========================= */
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill {
+    background: #f15bb5;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transform: translateY(0);
+    transition: transform 0.4s ease;
+}
+.skill:hover { transform: translateY(-8px) scale(1.1); }
+
+/* =========================
+   Contact
+========================= */
+#contact p { font-size: 1rem; margin-bottom: 8px; }
+
+/* =========================
+   Footer
+========================= */
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+/* =========================
+   Dark Theme
+========================= */
+body.dark {
+    background: linear-gradient(135deg, #2b003a, #1b001f);
+    color: #ddd;
+}
+body.dark a { color: #d86ef7; }
+body.dark .project-card, body.dark .game-card {
+    background: #220028;
+    color: #ddd;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+body.dark .skill { background: #d86ef7; }
+
+/* =========================
+   Animations & Floating Elements
+========================= */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+.project-card, .game-card { animation: float 6s ease-in-out infinite; }
+
+/* Responsive */
+@media (max-width: 900px) {
+    .project-list, .game-container { flex-direction: column; }
+}
+
+@keyframes gradientBG {
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}

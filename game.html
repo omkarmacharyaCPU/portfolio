@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mini Game Portal</title>
+<link rel="stylesheet" href="game.css">
+</head>
+<body>
+
+<h1>Mini Game Portal</h1>
+<p>Choose a game and have fun!</p>
+
+<div id="game-buttons">
+    <div class="game-card" onclick="startGame('rps')">
+        <h3>🎮 Rock Paper Scissors</h3>
+        <p>Play vs computer! Who will win?</p>
+    </div>
+
+    <div class="game-card" onclick="startGame('number')">
+        <h3>🔢 Number Guess</h3>
+        <p>Guess the random number between 1 and 20</p>
+    </div>
+
+    <div class="game-card" onclick="startGame('quiz')">
+        <h3>📝 Mini Quiz</h3>
+        <p>Test your programming skills! Easy → Hard</p>
+    </div>
+
+    <div class="game-card" onclick="startGame('typing')">
+        <h3>⌨️ Typing Speed Test</h3>
+        <p>Type fast & accurate! Check your WPM</p>
+    </div>
+</div>
+
+<div id="game-container"></div>
+<button id="back-btn" onclick="backToPortfolio()">Back to Portfolio</button>
+
+<script src="game.js"></script>
+</body>
+</html>
